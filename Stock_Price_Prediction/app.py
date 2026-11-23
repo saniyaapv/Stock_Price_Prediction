@@ -14,8 +14,10 @@ import matplotlib.pyplot as plt
 
 st.title("Stock Price Prediction")
 
-# Load Excel dataset
-data = pd.read_excel("stock_data.xlsx")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+data = pd.read_excel(os.path.join(BASE_DIR, "stock_data.xlsx"))
 
 # Display dataset
 st.subheader("Historical Stock Market Data")
